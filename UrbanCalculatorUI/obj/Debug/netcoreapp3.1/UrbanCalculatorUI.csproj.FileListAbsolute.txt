@@ -1,0 +1,15 @@
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\bin\Debug\netcoreapp3.1\UrbanCalculatorUI.exe
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\bin\Debug\netcoreapp3.1\UrbanCalculatorUI.deps.json
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\bin\Debug\netcoreapp3.1\UrbanCalculatorUI.runtimeconfig.json
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\bin\Debug\netcoreapp3.1\UrbanCalculatorUI.runtimeconfig.dev.json
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\bin\Debug\netcoreapp3.1\UrbanCalculatorUI.dll
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\bin\Debug\netcoreapp3.1\UrbanCalculatorUI.pdb
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\obj\Debug\netcoreapp3.1\UrbanCalculatorUI.csprojAssemblyReference.cache
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\obj\Debug\netcoreapp3.1\UrbanCalculatorUI.csproj.GenerateResource.cache
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\obj\Debug\netcoreapp3.1\UrbanCalculatorUI.AssemblyInfoInputs.cache
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\obj\Debug\netcoreapp3.1\UrbanCalculatorUI.AssemblyInfo.cs
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\obj\Debug\netcoreapp3.1\UrbanCalculatorUI.csproj.CoreCompileInputs.cache
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\obj\Debug\netcoreapp3.1\UrbanCalculatorUI.dll
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\obj\Debug\netcoreapp3.1\UrbanCalculatorUI.pdb
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\obj\Debug\netcoreapp3.1\UrbanCalculatorUI.genruntimeconfig.cache
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\obj\Debug\netcoreapp3.1\UrbanCalculatorUI.UrbanCalculator.resources

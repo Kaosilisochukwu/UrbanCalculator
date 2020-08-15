@@ -1,0 +1,9 @@
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculator\bin\Debug\netstandard2.0\UrbanCalculator.deps.json
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculator\bin\Debug\netstandard2.0\UrbanCalculator.dll
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculator\bin\Debug\netstandard2.0\UrbanCalculator.pdb
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculator\obj\Debug\netstandard2.0\UrbanCalculator.csprojAssemblyReference.cache
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculator\obj\Debug\netstandard2.0\UrbanCalculator.AssemblyInfoInputs.cache
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculator\obj\Debug\netstandard2.0\UrbanCalculator.AssemblyInfo.cs
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculator\obj\Debug\netstandard2.0\UrbanCalculator.csproj.CoreCompileInputs.cache
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculator\obj\Debug\netstandard2.0\UrbanCalculator.dll
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculator\obj\Debug\netstandard2.0\UrbanCalculator.pdb
