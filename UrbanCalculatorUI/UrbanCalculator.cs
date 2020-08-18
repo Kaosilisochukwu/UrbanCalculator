@@ -40,7 +40,7 @@ namespace UrbanCalculatorUI
                     visDisplay.Text = "";
                     reset = false;
                 }
-                if (addDigit.Text == "." && reset == true)
+                if (addDigit.Text == ".")
                 {
                     if (visDisplay.Text == "")
                         visDisplay.Text += "0";

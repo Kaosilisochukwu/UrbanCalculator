@@ -6,6 +6,7 @@ namespace UrbanCalculator
 {
     public class CalculationFactory : ICalculationFactory
     {
+
         public string DivisionOperation(string first, string second)
         {
             var divider = new Divide();
