@@ -14,3 +14,6 @@ C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\obj\Debug\
 C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\obj\Debug\netcoreapp3.1\UrbanCalculatorUI.genruntimeconfig.cache
 C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\obj\Debug\netcoreapp3.1\UrbanCalculatorUI.UrbanCalculator.resources
 C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\obj\Debug\netcoreapp3.1\UrbanCalculatorUI.Properties.Resources.resources
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\bin\Debug\netcoreapp3.1\UrbanCalculator.dll
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\bin\Debug\netcoreapp3.1\UrbanCalculator.pdb
+C:\Users\hp\Documents\Progamming\C#\UrbanCalculator\UrbanCalculatorUI\obj\Debug\netcoreapp3.1\UrbanCalculatorUI.csproj.CopyComplete

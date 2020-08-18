@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "UrbanCalculatorUI/1.0.0": {
+        "dependencies": {
+          "UrbanCalculator": "1.0.0"
+        },
         "runtime": {
           "UrbanCalculatorUI.dll": {}
+        }
+      },
+      "UrbanCalculator/1.0.0": {
+        "runtime": {
+          "UrbanCalculator.dll": {}
         }
       }
     }
   },
   "libraries": {
     "UrbanCalculatorUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UrbanCalculator/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

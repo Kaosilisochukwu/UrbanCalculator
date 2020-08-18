@@ -5,34 +5,48 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using UrbanCalculator;
 
 namespace UrbanCalculatorUI
 {
     public partial class UrbanCalculator : Form
     {
+        private readonly ICalculationFactory Factory;
         string mathOperator = "";
-        double currentAns, operated;
+        string currentAns, operated;
         bool reset = false;
 
-
-        public UrbanCalculator()
+        public UrbanCalculator(ICalculationFactory factory)
         {
+           
             InitializeComponent();
+            Factory = factory;
         }
 
         private void numbers(object sender, EventArgs e)
         {
             Button addDigit = (Button)sender;
-            if(visDisplay.Text.Length < 16)
+            try
             {
+                if (visDisplay.Text.Length >= 15)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+
                 if (visDisplay.Text == "0")
                     visDisplay.Text = "";
+                if (reset == true)
+                {
+                    visDisplay.Text = "";
+                    reset = false;
+                }
                 if (addDigit.Text == "." && reset == true)
                 {
                     if (visDisplay.Text == "")
                         visDisplay.Text += "0";
                     if (!visDisplay.Text.Contains("."))
                         visDisplay.Text += addDigit.Text;
+                    reset = false;
                 }
                 else if (mathOperator != "" && reset == true)
                 {
@@ -42,8 +56,13 @@ namespace UrbanCalculatorUI
                 }
                 else
                     visDisplay.Text += addDigit.Text;
-                operated = double.Parse(visDisplay.Text);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                resetCalculator();
+            }           
+            operated = visDisplay.Text;
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
@@ -57,65 +76,76 @@ namespace UrbanCalculatorUI
         private void clearBtn_Click(object sender, EventArgs e)
         {
             visDisplay.Text = "0";
-            operated = 0;
+            operated = "0";
         }
 
         private void resetBtn_Click(object sender, EventArgs e)
         {
-            visDisplay.Text = "0";
-            mathOperator = "";
-            currentAns = 0;
-            operated = 0;
+            resetCalculator();
         }
-
-        //private void UrbanCalculator_Load(object sender, EventArgs e)
-        //{
-
-        //}
-
 
         private void operators(object sender, EventArgs e)
         {
             Button currentOperator = (Button)sender;
-            if (mathOperator == "+")
-                visDisplay.Text = (currentAns + operated).ToString();
-            else if (mathOperator == "-")
-                visDisplay.Text = (currentAns - operated).ToString();
-            else if (mathOperator == "x")
-                visDisplay.Text = (currentAns * operated).ToString();
-            else if (mathOperator == "÷")
-                visDisplay.Text = (currentAns / operated).ToString();
-            currentAns = double.Parse(visDisplay.Text);
-            mathOperator = currentOperator.Text;
-            operated = mathOperator == "+" || mathOperator == "-" ? 0 : 1;
-            reset = true; 
-
+            try
+            {
+                if (mathOperator == "+")
+                    visDisplay.Text = Factory.AdditionOperation(currentAns, operated);
+                else if (mathOperator == "-")
+                    visDisplay.Text = Factory.SubtractionOperation(currentAns, operated);
+                else if (mathOperator == "x")
+                    visDisplay.Text = Factory.MultiplyOperation(currentAns, operated);
+                else if (mathOperator == "÷")
+                    visDisplay.Text = Factory.DivisionOperation(currentAns, operated);
+                currentAns = visDisplay.Text;
+                mathOperator = currentOperator.Text;
+                reset = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                resetCalculator();
+            }
         }
-
+        void resetCalculator()
+        {
+            visDisplay.Text = "0";
+            mathOperator = "";
+            currentAns = "0";
+            operated = "0";
+        }
         private void NegationBtn_Click(object sender, EventArgs e)
         {
             if (visDisplay.Text.Contains("-"))
                 visDisplay.Text = visDisplay.Text.Remove(0, 1);
             else
                 visDisplay.Text = "-" + visDisplay.Text;
-            operated = double.Parse(visDisplay.Text);
+            operated = visDisplay.Text;
         }
+
 
         private void equaltoBtn_Click(object sender, EventArgs e)
         {
-            if (mathOperator == "+")
-                visDisplay.Text = (currentAns + operated).ToString();
-            else if(mathOperator == "-")
-                visDisplay.Text = (currentAns - operated).ToString();
-            else if(mathOperator == "x")
-                visDisplay.Text = (currentAns * operated).ToString();
-            else if(mathOperator == "÷")
-                visDisplay.Text = (currentAns / operated).ToString();
-            reset = true;
-            currentAns = double.Parse(visDisplay.Text);
-            mathOperator = "";
-            operated = 0;
-        }
+            try
+            {
+                if (mathOperator == "+")
+                    visDisplay.Text = Factory.AdditionOperation(currentAns, operated);//.ToString();
+                else if (mathOperator == "-")
+                    visDisplay.Text = Factory.SubtractionOperation(currentAns, operated);//.ToString();
+                else if (mathOperator == "x")
+                    visDisplay.Text = Factory.MultiplyOperation(currentAns, operated);//.ToString();
+                else if (mathOperator == "÷")
+                    visDisplay.Text = Factory.DivisionOperation(currentAns, operated);//.ToString();
+                reset = true;
+                currentAns = visDisplay.Text;
+                mathOperator = "";
+                operated = "0";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
 
+        }
     }
 }

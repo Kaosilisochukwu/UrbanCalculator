@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "UrbanCalculator/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/UrbanCalculator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UrbanCalculator.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "UrbanCalculator/1.0.0": {
+      "type": "project",
+      "path": "../UrbanCalculator/UrbanCalculator.csproj",
+      "msbuildProject": "../UrbanCalculator/UrbanCalculator.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "UrbanCalculator >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\hp\\.nuget\\packages\\": {}
@@ -32,7 +51,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\hp\\Documents\\Progamming\\C#\\UrbanCalculator\\UrbanCalculator\\UrbanCalculator.csproj": {
+              "projectPath": "C:\\Users\\hp\\Documents\\Progamming\\C#\\UrbanCalculator\\UrbanCalculator\\UrbanCalculator.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

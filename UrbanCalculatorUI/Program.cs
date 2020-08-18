@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UrbanCalculator;
 
 namespace UrbanCalculatorUI
 {
@@ -17,7 +18,9 @@ namespace UrbanCalculatorUI
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UrbanCalculator());
+
+            ICalculationFactory fac = FuncDistributor.Store();
+            Application.Run(new UrbanCalculator(fac));
         }
     }
 }
