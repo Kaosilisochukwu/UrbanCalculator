@@ -9,6 +9,21 @@ namespace UrbanCalculator
     /// </summary>
     public class CalculationFactory : ICalculationFactory
     {
+
+        public string SelectOperation(string sign, string first, string second)
+        {
+            string operatedString = string.Empty;
+            if (sign == "+")
+                operatedString = AdditionOperation(first, second);
+            if (sign == "x")
+                operatedString = MultiplyOperation(first, second);
+            if (sign == "-")
+                operatedString = SubtractionOperation(first, second);
+            if (sign == "÷")
+                operatedString = DivisionOperation(first, second);
+
+            return operatedString;
+        }
         /// <summary>
         /// DivisionOperation methid that defines methods for division operation for a calculator
         /// </summary>

@@ -11,5 +11,6 @@
         string AdditionOperation(string first, string second);
         string NegationOperation(string first);
         string SubtractionOperation(string first, string second);
+        string SelectOperation(string sign, string first, string second);
     }
 }

@@ -109,16 +109,10 @@ namespace UrbanCalculatorUI
             Button currentOperator = (Button)sender;
             try
             {
+
                 //PERFORMS CALCULATIONS BASED ON THE OPERATOR THAT HAS BEEN CLICKED
-                if (mathOperator == "+")
-                    visDisplay.Text = Factory.AdditionOperation(currentAns, operated);
-                else if (mathOperator == "-")
-                    visDisplay.Text = Factory.SubtractionOperation(currentAns, operated);
-                else if (mathOperator == "x")
-                    visDisplay.Text = Factory.MultiplyOperation(currentAns, operated);
-                else if (mathOperator == "÷")
-                    visDisplay.Text = Factory.DivisionOperation(currentAns, operated);
-                //ASSIGNS THE currentAns VARIABLE TO THE VALUE ON THE SCREEN,
+                if(mathOperator == "x" || mathOperator == "-" || mathOperator == "+" || mathOperator == "÷")
+                    visDisplay.Text = Factory.SelectOperation(mathOperator, currentAns, operated);
                 currentAns = visDisplay.Text;
                 //UPDATES THE OPERATOR VALUE
                 mathOperator = currentOperator.Text;
@@ -150,20 +144,13 @@ namespace UrbanCalculatorUI
             operated = visDisplay.Text;
         }
 
-
         private void equaltoBtn_Click(object sender, EventArgs e)
         {
             try
             {
                 //PERFORMS CALCULATOR OPERATION BASED ON THE MATH OPERATOR
-                if (mathOperator == "+")
-                    visDisplay.Text = Factory.AdditionOperation(currentAns, operated);
-                else if (mathOperator == "-")
-                    visDisplay.Text = Factory.SubtractionOperation(currentAns, operated);
-                else if (mathOperator == "x")
-                    visDisplay.Text = Factory.MultiplyOperation(currentAns, operated);
-                else if (mathOperator == "÷")
-                    visDisplay.Text = Factory.DivisionOperation(currentAns, operated);
+                if (mathOperator == "x" || mathOperator == "-" || mathOperator == "+" || mathOperator == "÷")
+                    visDisplay.Text = Factory.SelectOperation(mathOperator, currentAns, operated);
                 //SETS THE RESET VALUE TO TRUE, ASSIGNS THE currentAns TO THE VALUE ON THE SCREEN, RESETS THE MATH OPERATOR
                 //ASSIGNS THE VALUE OF THE CURRENT VALUE TO BE OPERATED UPON TO 0
                 reset = true;
