@@ -6,17 +6,9 @@ namespace UrbanCalculator
 {
     public static class FuncDistributor
     {
-        //declared a variable Clone of type ICalculationFactory
-        public static ICalculationFactory Clone { get; private set; }
+        //declared a variable Clone of type ICalculationFactory and assigns it to an instance of of CalculationFactory
+        public static ICalculationFactory Clone { get; private set; } = new CalculationFactory();
 
-        /// <summary>
-        /// Assigns an instance of CalculationFactory to Clone
-        /// </summary>
-        /// <returns>ICalculationFactory</returns>
-        public static ICalculationFactory Store()
-        {
-            return Clone = new CalculationFactory();
-            
-        }
+
     }
 }

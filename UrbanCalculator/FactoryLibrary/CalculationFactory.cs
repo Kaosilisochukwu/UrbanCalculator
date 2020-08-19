@@ -9,7 +9,13 @@ namespace UrbanCalculator
     /// </summary>
     public class CalculationFactory : ICalculationFactory
     {
-
+        /// <summary>
+        /// performs an arithmetic operation based on nte operaror that is clicked
+        /// </summary>
+        /// <param name="sign"></param>
+        /// <param name="first"></param>
+        /// <param name="second"></param>
+        /// <returns>String result of the operation</returns>
         public string SelectOperation(string sign, string first, string second)
         {
             string operatedString = string.Empty;

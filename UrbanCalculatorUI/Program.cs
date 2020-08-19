@@ -19,7 +19,7 @@ namespace UrbanCalculatorUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            ICalculationFactory fac = FuncDistributor.Store();
+            ICalculationFactory fac = FuncDistributor.Clone;
             Application.Run(new UrbanCalculator(fac));
         }
     }

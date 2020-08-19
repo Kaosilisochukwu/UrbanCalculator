@@ -14,11 +14,14 @@ namespace UrbanCalculatorUI
 
         //INITIALIZE VARIABLE TO HOLD THE FACTORY METHODS
         private readonly ICalculationFactory Factory;
+
         //INIALIZES THE VALUE TO HOLD THE CURRENT MATH OPERATOR
         string mathOperator = "";
+
         //INITIALIZE THE VARIABLE THAT HOLDS THE RECENT ANSWER AS currentAns 
         //AND THE VALUE TO BE OPERATED UPON AS operated 
         string currentAns, operated;
+
         //INITIALIZE THE VALUE TO CHECK IF THE SCREEN SHOULD BE RESET
         bool reset = false;
 
@@ -55,9 +58,11 @@ namespace UrbanCalculatorUI
                     //IF THE INPUT WAS A DECIMAL VALUE,  AND THE SCREEN IS RESET ZERO IS FIRST APPENDED
                     if (visDisplay.Text == "")
                         visDisplay.Text += "0";
+
                     //IF THE VALUE ON THE SCREEN DOES NOT CONTAIN A PERIOD ALREADY, A PERIOD IS THEN ADDED
                     if (!visDisplay.Text.Contains("."))
                         visDisplay.Text += addDigit.Text;
+
                     //RESET VALUE IS SET TO FALSE
                     reset = false;
                 }
@@ -113,9 +118,13 @@ namespace UrbanCalculatorUI
                 //PERFORMS CALCULATIONS BASED ON THE OPERATOR THAT HAS BEEN CLICKED
                 if(mathOperator == "x" || mathOperator == "-" || mathOperator == "+" || mathOperator == "÷")
                     visDisplay.Text = Factory.SelectOperation(mathOperator, currentAns, operated);
+
+                //ASSIGNS THE currentAns VARIABLE TO THE VALUE ON THE SCREEN,
                 currentAns = visDisplay.Text;
+
                 //UPDATES THE OPERATOR VALUE
                 mathOperator = currentOperator.Text;
+
                 //SET THE RESET VALUE TO TRUE
                 reset = true;
             }
@@ -140,6 +149,7 @@ namespace UrbanCalculatorUI
         {
             //NEGATES THE VALUE ON THE SCREEN
            visDisplay.Text = Factory.NegationOperation(visDisplay.Text);
+
             //ASSIGNS THE VALUE TO THE CURRENT VALUE TO BE OPERATED UPON
             operated = visDisplay.Text;
         }
@@ -151,6 +161,7 @@ namespace UrbanCalculatorUI
                 //PERFORMS CALCULATOR OPERATION BASED ON THE MATH OPERATOR
                 if (mathOperator == "x" || mathOperator == "-" || mathOperator == "+" || mathOperator == "÷")
                     visDisplay.Text = Factory.SelectOperation(mathOperator, currentAns, operated);
+
                 //SETS THE RESET VALUE TO TRUE, ASSIGNS THE currentAns TO THE VALUE ON THE SCREEN, RESETS THE MATH OPERATOR
                 //ASSIGNS THE VALUE OF THE CURRENT VALUE TO BE OPERATED UPON TO 0
                 reset = true;
