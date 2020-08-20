@@ -3,14 +3,15 @@
     /// <summary>
     /// DEFINES METHODS TO BE IMPLEMENTED BY CLASSES THAT INHERITS FROM ICalculationFactory
     /// </summary>
-    public interface ICalculationFactory
+    public interface ICalculationFactory : IAdd, ISubtract, IDivide, IMultiply, INegate
     {
-        //DEFINES METHODS TO BE IMPLEMENTED BY CLASSES THAT INHERITS FROM ICalculationFactory
-        string DivisionOperation(string first, string second);
-        string MultiplyOperation(string first, string second);
-        string AdditionOperation(string first, string second);
-        string NegationOperation(string first);
-        string SubtractionOperation(string first, string second);
+        new
+                //DEFINES METHODS TO BE IMPLEMENTED BY CLASSES THAT INHERITS FROM ICalculationFactory
+                string DivisionOperation(string first, string second);
+        new string MultiplyOperation(string first, string second);
+        new string AdditionOperation(string first, string second);
+        new string NegationOperation(string first);
+        new string SubtractionOperation(string first, string second);
         string SelectOperation(string sign, string first, string second);
     }
 }

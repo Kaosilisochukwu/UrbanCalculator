@@ -4,6 +4,6 @@
     {
         //DEFINES divide METHOD FOR CLASSES THAT INHERIT FROM THE INTERFACE
 
-        string divide(string fistnumberstring, string seccondNumberString);
+        string DivisionOperation(string fistnumberstring, string seccondNumberString);
     }
 }

@@ -12,7 +12,7 @@ namespace UrbanCalculator
         /// <param name="fistnumberstring"></param>
         /// <param name="seccondNumberString"></param>
         /// <returns>string result of the Subtraction</returns>
-        public string Subract(string fistnumberstring, string seccondNumberString)
+        public string SubtractionOperation(string fistnumberstring, string seccondNumberString)
         {
             decimal firstNumber;
             decimal secondNumber;

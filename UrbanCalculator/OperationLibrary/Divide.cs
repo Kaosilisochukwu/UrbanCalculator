@@ -12,7 +12,7 @@ namespace UrbanCalculator
         /// <param name="fistnumberstring"></param>
         /// <param name="seccondNumberString"></param>
         /// <returns>string result of the division</returns>
-        public string divide(string fistnumberstring, string seccondNumberString)
+        public string DivisionOperation(string fistnumberstring, string seccondNumberString)
         {
             decimal firstNumber;
             decimal secondNumber;

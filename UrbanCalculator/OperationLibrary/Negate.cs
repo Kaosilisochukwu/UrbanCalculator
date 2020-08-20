@@ -11,7 +11,7 @@ namespace UrbanCalculator
         /// </summary>
         /// <param name="input"></param>
         /// <returns>String of the revered sign</returns>
-        public string negate(string input) => !decimal.TryParse(input, out decimal decimalNumber) 
+        public string NegationOperation(string input) => !decimal.TryParse(input, out decimal decimalNumber) 
                                                 ? throw new ArgumentException() : input.Contains("-")
                                                 ? input.Remove(0, 1) : "-" + input;
     }

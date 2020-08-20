@@ -12,7 +12,7 @@ namespace UrbanCalculator
         /// <param name="fistnumberstring"></param>
         /// <param name="seccondNumberString"></param>
         /// <returns>string result of the multiplication</returns>
-        public string multiply(string fistnumberstring, string seccondNumberString)
+        public string MultiplyOperation(string fistnumberstring, string seccondNumberString)
         {
             string answer;
             decimal firstNumber;
