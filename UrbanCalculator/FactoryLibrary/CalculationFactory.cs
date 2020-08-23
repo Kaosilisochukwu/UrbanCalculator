@@ -38,8 +38,25 @@ namespace UrbanCalculator
         /// <param name="first">Numerator</param>
         /// <param name="second">Denominator</param>
         /// <returns>string quotient</returns>
-        public string DivisionOperation(string first, string second) => new Add().AdditionOperation(first, second);
+        public string DivisionOperation(string fistnumberstring, string seccondNumberString)
+        {
+            decimal firstNumber;
+            decimal secondNumber;
+            bool firstIsValid = decimal.TryParse(fistnumberstring, out firstNumber);
+            bool secondIsValid = decimal.TryParse(seccondNumberString, out secondNumber);
 
+            //CHECKS IF A THE VALUES CAN BE PARSED AND THROWS IF IT CAN'T BE PARSED
+            if (!firstIsValid || !secondIsValid)
+                throw new ArgumentException();
+            //CHECKS FOR ZERO DIVISION
+            if (secondNumber == 0)
+                throw new DivideByZeroException();
+
+            string answer = Math.Round((firstNumber / secondNumber), 5).ToString();
+            if (answer.Length > 15)
+                throw new ArgumentOutOfRangeException();
+            return answer;
+        }
 
         /// <summary>
         /// MultiplyOperation method that defines methods for multiplication operation for a calculator
@@ -47,32 +64,75 @@ namespace UrbanCalculator
         /// <param name="first">Numerator</param>
         /// <param name="second">Denominator</param>
         /// <returns>string result of multiplication</returns>
-        public string MultiplyOperation(string first, string second) => new Multiply().MultiplyOperation(first, second);
+        public string MultiplyOperation(string fistnumberstring, string seccondNumberString)
+        {
+            string answer;
+            decimal firstNumber;
+            decimal secondNumber;
+            bool firstIsValid = decimal.TryParse(fistnumberstring, out firstNumber);
+            bool secondIsValid = decimal.TryParse(seccondNumberString, out secondNumber);
 
+            //CHECKS IF A THE VALUES CAN BE PARSED AND THROWS IF IT CAN'T BE PARSED
+            if (!firstIsValid || !secondIsValid)
+                throw new ArgumentException();
+            answer = Math.Round((firstNumber * secondNumber), 5).ToString();
+            if (answer.Length > 15)
+                throw new ArgumentOutOfRangeException("Calcution must not be more than 15 digits");
+            return answer;
+        }
 
         /// <summary>
         /// Negation method that defines methods for negation operation for a calculator
         /// </summary>
         /// <param name="first">Numerator</param>
         /// <returns>string sign inverse of a value</returns>
-        public string NegationOperation(string first) => new Negate().NegationOperation(first);
-
+        public string NegationOperation(string input) => !decimal.TryParse(input, out decimal decimalNumber) 
+                                                ? throw new ArgumentException() : input.Contains("-")
+                                                ? input.Remove(0, 1) : "-" + input;
 
         /// <summary>
         /// Subtraction method that defines methods for subtraction operation for a calculator
         /// </summary>
         /// <param name="first">Numerator</param>
         /// <param name="second">Denominator</param>
-        /// <returns>string difference</returns>
-        public string SubtractionOperation(string first, string second) => new Subtract().SubtractionOperation(first, second);
+        /// <returns>string difference</returns>        
+        public string SubtractionOperation(string fistnumberstring, string seccondNumberString)
+        {
+            decimal firstNumber;
+            decimal secondNumber;
+            bool firstIsValid = decimal.TryParse(fistnumberstring, out firstNumber);
+            bool secondIsValid = decimal.TryParse(seccondNumberString, out secondNumber);
+
+                //CHECKS IF A THE VALUES CAN BE PARSED AND THROWS IF IT CAN'T BE PARSED
+                if (!firstIsValid || !secondIsValid)
+                    throw new ArgumentException();
+            string answer = Math.Round((firstNumber - secondNumber), 5).ToString();
+                if (answer.Length > 15)
+                    throw new ArgumentOutOfRangeException();
+                return answer;
+        }
 
 
-        /// <summary>
-        /// Addition method that defines methods for addition operation for a calculator
-        /// </summary>
-        /// <param name="first">Numerator</param>
-        /// <param name="second">Denominator</param>
-        /// <returns>string sum</returns>
-        public string AdditionOperation(string first, string second) => new Add().AdditionOperation(first, second);
+    /// <summary>
+    /// Addition method that defines methods for addition operation for a calculator
+    /// </summary>
+    /// <param name="first">Numerator</param>
+    /// <param name="second">Denominator</param>
+    /// <returns>string sum</returns>
+    public string AdditionOperation(string fistnumberstring, string seccondNumberString)
+        {
+            decimal firstNumber;
+            decimal secondNumber;
+            bool firstIsValid = decimal.TryParse(fistnumberstring, out firstNumber);
+            bool secondIsValid = decimal.TryParse(seccondNumberString, out secondNumber);
+            string answer = Math.Round((firstNumber + secondNumber), 5).ToString();
+            //CHECKS IF A THE VALUES CAN BE PARSED AND THROWS IF IT CAN'T BE PARSED
+            if (!firstIsValid || !secondIsValid)
+                throw new ArgumentException();
+            if (answer.Length > 15)
+                throw new ArgumentOutOfRangeException();
+
+            return answer;
+        }
     }
 }

@@ -16,10 +16,10 @@ namespace UrbanCalculatorTest
             string secondNumberString = "10";
 
             //ACT
-            var expected = tester.AdditionOperation(firstNumberString, secondNumberString);
+            var actual = tester.AdditionOperation(firstNumberString, secondNumberString);
 
             //ASSERT
-            Assert.That(expected, Is.EqualTo("77"));
+            Assert.That(actual, Is.EqualTo("77"));
         }
 
         [Test]
@@ -58,10 +58,10 @@ namespace UrbanCalculatorTest
             string secondNumberString = "10";
 
             //ACT
-            var expected = tester.MultiplyOperation(firstNumberString, secondNumberString);
+            var actual = tester.MultiplyOperation(firstNumberString, secondNumberString);
 
             //ASSERT
-            Assert.That(expected, Is.EqualTo("60"));
+            Assert.That(actual, Is.EqualTo("60"));
         }
         [Test]
         public void ToTestThatSubtractionMethodReturnsCorrectStringValueOfSubtractingTwoStrings()
@@ -72,10 +72,10 @@ namespace UrbanCalculatorTest
             string secondNumberString = "10";
 
             //ACT 
-            var expected = tester.SubtractionOperation(firstNumberString, secondNumberString);
+            var actual = tester.SubtractionOperation(firstNumberString, secondNumberString);
 
             //ASSERT
-            Assert.That(expected, Is.EqualTo("57"));
+            Assert.That(actual, Is.EqualTo("57"));
         }
         [Test]
         public void ToTestThatDivisionMethodReturnsCorrectStringValueOfDividingTwoStrings()
@@ -86,10 +86,10 @@ namespace UrbanCalculatorTest
             string secondNumberString = "10";
 
             //ACT
-            var expected = tester.DivisionOperation(firstNumberString, secondNumberString);
+            var actual = tester.DivisionOperation(firstNumberString, secondNumberString);
 
             //ASSERT
-            Assert.That(expected, Is.EqualTo("6"));
+            Assert.That(actual, Is.EqualTo("6"));
         }
 
         [Test]
@@ -100,10 +100,10 @@ namespace UrbanCalculatorTest
             string firstNumberString = "-34";
 
             //ACT
-            var expected = tester.NegationOperation(firstNumberString);
+            var actual = tester.NegationOperation(firstNumberString);
 
             //ASSERT
-            Assert.That(expected, Is.EqualTo("34"));
+            Assert.That(actual, Is.EqualTo("34"));
         }
 
         public void NegateOperatorChangesPositiveNumberStringToNegativetiveNumberString()
@@ -113,10 +113,10 @@ namespace UrbanCalculatorTest
             string firstNumberString = "34";
 
             //ACT
-            var expected = tester.NegationOperation(firstNumberString);
+            var actual = tester.NegationOperation(firstNumberString);
 
             //ASSERT
-            Assert.That(expected, Is.EqualTo("-34"));
+            Assert.That(actual, Is.EqualTo("-34"));
         }
 
         [Test]

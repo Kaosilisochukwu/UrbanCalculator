@@ -5,9 +5,9 @@
     /// </summary>
     public interface ICalculationFactory : IAdd, ISubtract, IDivide, IMultiply, INegate
     {
-        new
-                //DEFINES METHODS TO BE IMPLEMENTED BY CLASSES THAT INHERITS FROM ICalculationFactory
-                string DivisionOperation(string first, string second);
+
+        //DEFINES METHODS TO BE IMPLEMENTED BY CLASSES THAT INHERITS FROM ICalculationFactory
+        new string DivisionOperation(string first, string second);
         new string MultiplyOperation(string first, string second);
         new string AdditionOperation(string first, string second);
         new string NegationOperation(string first);
